@@ -11,6 +11,10 @@
     <link rel="apple-touch-icon" sizes="114x114" href="somedir/apple-touch-icon-iphone-retina-120x120.png">
     <link rel="apple-touch-icon" sizes="144x144" href="somedir/apple-touch-icon-ipad-retina-152x152.png">
 
+    <meta name="theme-color" content="#6777ef" />
+    <link rel="apple-touch-icon" href="{{ asset('logo.PNG') }}">
+    <link rel="manifest" href="{{ asset('/manifest.json') }}">
+
     @vite('resources/ts/app.tsx')
     @inertiaHead
 </head>
@@ -19,6 +23,15 @@
     @inertia
 
     <script src="{{ mix('ts/app.tsx') }}"></script>
+
+    <script src="{{ asset('/sw.js') }}"></script>
+    <script>
+        if (!navigator.serviceWorker.controller) {
+            navigator.serviceWorker.register("/sw.js").then(function(reg) {
+                console.log("Service worker has been registered for scope: " + reg.scope);
+            });
+        }
+    </script>
 </body>
 
 </html>

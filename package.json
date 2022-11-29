@@ -5,6 +5,7 @@
         "build": "vite build"
     },
     "devDependencies": {
+        "@types/node": "^18.11.9",
         "axios": "^1.1.2",
         "laravel-vite-plugin": "^0.7.0",
         "lodash": "^4.17.19",
@@ -17,8 +18,21 @@
         "@types/react": "^18.0.25",
         "@types/react-dom": "^18.0.9",
         "@types/typescript": "^2.0.0",
+        "@types/workbox-core": "^4.3.1",
+        "@types/workbox-expiration": "^4.3.1",
+        "@types/workbox-precaching": "^4.3.1",
+        "@types/workbox-routing": "^4.3.1",
+        "@types/workbox-strategies": "^4.3.1",
+        "pwa": "^1.9.7",
         "react": "^18.2.0",
         "react-dom": "^18.2.0",
-        "typescript": "^4.9.3"
+        "service-worker": "^0.0.0",
+        "typescript": "^4.9.3",
+        "workbox": "^0.0.0",
+        "workbox-core": "^6.5.4",
+        "workbox-expiration": "^6.5.4",
+        "workbox-precaching": "^6.5.4",
+        "workbox-routing": "^6.5.4",
+        "workbox-strategies": "^6.5.4"
     }
 }
